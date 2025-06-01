@@ -1,27 +1,91 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="utf-8">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="expires" content="-1" />
+	<meta http-equiv="expires" content="-1" />
+	<meta name="theme-color" content="#673ab7" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>تسجيل الدخول</title>
-
+    <title>شبكة العبادي</title>
 	<link rel="stylesheet" href="assets/css/assets.css" />
 	<link rel="stylesheet" type="text/css" href="assets/fonts/Almarai.css" />
-	<link rel="stylesheet" href="assets/css/fontello.css" />
-    <script src="assets/js/hotCookie.min.js"></script>
+	<link rel="stylesheet" href="assets/css/fontello.css" /> 
+	<!-- mac test-->
+    <script src="js/whitelist.js"></script>
+    
     <script src="assets/js/hotInImprover.min.js"></script>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/chik.css">
 	<script type="text/javascript" src="assets/js/label.js"></script>
-	<script src="assets/js/jquery-1.11.2.min.js"></script>
-	<script src="assets/js/hotBlocker.min.js" login-error="$(error)" try-count="3" block-time="1"></script>
+	<script src="assets/js/hotBlocker.min.js" login-error="$(error)" try-count="10" block-time="1"></script>
+	$(if error == '')
+	<script src="assets/js/hotCookie.min.js"></script>
+<script type='text/javascript' language="javascript">
 
+setCookie('speed', '', 365);
+setCookie('update', '', 365);
+setCookie('forface', '', 365);
+</script>
+<style type='text/css'>
 
+#alert-speed{display: block;}
+</style> 
+$(endif)
+<!-- Modal علي-->
+
+   <!-- <!--  <div  id="alert-speed" class="alert-back" >
+        <div class="modal">
+            <div class="modal-icon phone"><i class="icon-chart-bar"></i></div>
+            <div class="title phone"> تخصيص الكرت</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+               <!-- <div>  <h4 id="Phone_Admin"> تعطيل التحديثات التلقائية للجهاز و متجر التطبيقات</h4>
+                 
+				  <div id="msgtoggles">
+				   <input type="checkbox" name="checkbox2" id="update" class="ios-toggle"  value="ON" unchecked/>
+				   <label for="update" class="checkbox-label" data-off="عدم تعطيل" data-on="تعطيل"></label>
+				 </div>  
+				 </div> 
+				
+				 <h4 style=" color :red ;padding: 4px 0px 13px 4px;" class="animate" >👇  اختار سرعة النت بنفسك  </h4> 
+          
+                    <select  id="speed" onchange="setCookie('speed', this.value, 1365); document.getElementById('alert-speed').style.display = ('none');choosed();dis();face();" name="speed">
+					
+					                 <option value="speed_default" selected disabled>اضغط لاختيار السرعة </option>
+									 <option value="speed_gaming" >سرعة منخفضة 1 ميجا</option>
+                                     <option value="speed_economic" >سرعة متوسطة 2 ميجا</option>
+                                     <option value="speed_normal" >سرعة  عالية 4 ميجا</option> 
+                                     <option value="speed_high">مفتوح</option> -->
+                                <!-- <option value="speed_very">مفتوح</option> 
+                                    
+									   <!-- <script type="text/javascript">
+                                       function refrClock() {
+                                                   var d = new Date();
+                                                    var h = d.getHours();
+                                              if (h > 15 || h < 04 ) {
+                                                      h -= 12;
+                                           document.write(" <option value="+"speed_very"+" disabled>سرعة عالية جدا</option>");
+                                           } else {
+                                                  am_pm = "صباحاً  ";
+                                                  document.write(" <option value="+"speed_very"+"disabled>سرعة عالية جدا</option>");
+
+                                                   }
+           
+                                                         }
+                                          refrClock();
+                                    </script> 
+                                     
+                         </select>
+
+            </div>
+			
+            </div>
+        </div> -->
+    
+    <!-- End Modal علي-->
 	 
 </head>
 
@@ -37,8 +101,12 @@ $(if chap-id)
 	<script type="text/javascript">
 	//<!--
 	    function doLogin() {
+		userLogin();
 		document.sendin.username.value = document.login.username.value;
 		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.speed.value = document.login.speed.value;
+		document.sendin.update.value = document.login.update.value;
+		document.sendin.facebook.value = document.login.facebook.value;
 		document.sendin.submit();
 		return false;
 	    }
@@ -46,88 +114,161 @@ $(if chap-id)
 	</script>
 $(endif)
 
-<!-- بداية كود الوضع الليلي-->
 
-<style type='text/css'> /* Night Mode */ .nightly{color:#999;font-size:13px} .Switchbtn{position:fixed;text-align:center;display:inline-block;align-items:center;z-index:100;left:20px;top:20px} .togglenight{display:none;} .togglenight + .togglenight-btn{outline:0;display:inline-block;width:45px;height:10px;position:relative;cursor:pointer;margin-right:5px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;} .togglenight + .togglenight-btn:after,.togglenight + .togglenight-btn:before{position:relative;display:block;content:"";width:50%;height:100%} .togglenight-switch + .togglenight-btn{background:#d5d2fc;border-radius:99em;transition:all .4s ease} .togglenight-switch + .togglenight-btn:after{content:'';border-radius:100px;background:#887fff;transition:right 0.3s cubic-bezier(0.175,0.885,0.32,1.275),padding 0.3s ease,margin 0.3s ease;position:absolute;width:20px;height:20px;top:-5px;right:0;box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)} .togglenight-switch:checked + .togglenight-btn{background:rgba(255,255,255,.15)} .togglenight:checked + .togglenight-btn:after{content:'';right:55%;background:#ff9f43} .nightmode{background:#202124;color:rgba(255,255,255,.7)} .nightmode a{color:rgba(255,255,255,.7)!important} .nightmode a:hover{color:rgba(255,255,255,.4)!important}
-.nightmode .class-baru{}
-.nightmode .class-baru{}
-.nightmode .form{background-color:#202124;}
-.nightmode .submit button {background:#101;}
-.nightmode .back button {background:#101;}
-.nightmode .trial {background:#101;}
-.nightmode .social-icon {background:#101;}
-.nightmode .social-icon.facebook:hover {background:#101;}
-.nightmode .social-icon.dollar:hover {background:#101;}
-.nightmode .social-icon.gplus:hover {background:#101;}
-.nightmode .social-icon.location:hover {background:#101;}
-.nightmode .copyright {background:#101;}
-.nightmode .marque {background:#101;}
-.nightmode .banner {background:#202124;}
-.nightmode .form .input-group .input-field input {color:#fff;}
-.nightmode .modal {background:#202124;}
-.nightmode .bnr {background:#202124;}
-
-</style>
-
-
-<!-- نهاية كود الوضع الليلي-->
-
-<body>
-<!-- /كود لوغو خارج البنر-->
-
-                  <!--<div class="logo-basheer"><img src="assets/img/logo.svg"></div>-->
-				  
-<!-- /نهاية كود اللوغو--> 
-
-<!-- /بداية كود الايقونات-->
-        <div class="bnr">
-        <div class="banner2">
-                <div class="floated">
-                        <a href="prices.html"><div class="social-icon dollar">
-                            <i class="icon-dollar"></i>
-                        </div></a>
-                       <!-- <a href="https://www.facebook.com/basel.alkabor"><div class="social-icon facebook">
-                            <i class="icon-facebook"></i>
-                        </div></a>-->
-                        <div class="social-icon gplus" onclick="document.getElementById('alert-phone').style.display = ('block')">
-                            <i class="icon-whatsapp"></i>
-                        </div>
-                        <div class="social-icon location" onclick="document.getElementById('alert-location').style.display = ('block')">
-                            <i class="icon-location"></i>
-                        </div>
-                    </div>
-        </div>
-		<div class='Switchbtn'> <span class='nightly'>الوضع الليلي</span> <input class='togglenight togglenight-switch' id='nightmode' type='checkbox'/> <label class='togglenight-btn' for='nightmode'/></div>
 <script type='text/javascript'>
 //<![CDATA[
 // Night Mode
 $("#nightmode").click(function(){$("body").toggleClass("nightmode")}),$("body").toggleClass(localStorage.toggled),$("#nightmode").click(function(){"nightmode"!=localStorage.toggled?($("body").toggleClass("nightmode",!0),localStorage.toggled="nightmode"):($("body").toggleClass("nightmode",!1),localStorage.toggled="")});
 //]]>
+function night() {
+document.getElementById("sun").src = "img/user.svg"
+}
 </script>
-		<!-- /نهاية كود الايقونات-->
+	<script> 
+function userLogin() {
+	var hscard = document.getElementById("uname").value;
+	  
+	  if (hscard.match(/^s.*$/)) {
+          document.getElementById("domain").value="";
+		 var x2 = document.getElementById("speed").selectedIndex;
+var msgspeed2 =document.getElementsByTagName("option")[x2].value;
+		  document.getElementById("Hspeed").value=msgspeed2;
+		  
+				} 
+		
+}
+	function choosed() {
+	var x = document.getElementById("speed").selectedIndex;
+var msgspeed =document.getElementsByTagName("option")[x].value;
+                       if (msgspeed == "speed_gaming") {
+                               document.getElementById("choosedspeed").innerHTML = "سرعة منخفضة 1 ميجا √";
+                                 document.getElementById("domain").value="speed_gaming";
+							
+                        } else if (msgspeed == "speed_economic") {
+                               document.getElementById("choosedspeed").innerHTML = "سرعة متوسطة 2 ميجا √";
+                                 document.getElementById("domain").value="speed_economic";
+							} else if (msgspeed == "speed_normal") {
+	                              document.getElementById("choosedspeed").innerHTML = "سرعة  عالية 4 ميجا √";
+								  document.getElementById("domain").value="speed_normal";
+							} else if (msgspeed == "speed_high") {
+							document.getElementById('alert-middlespeed').style.display = ('block')
+							document.getElementById("choosedspeed").innerHTML = "مفتوح √";
+						          document.getElementById("domain").value="speed_high";
+							} else if (msgspeed == "speed_very") {
+							document.getElementById('alert-highspeed').style.display = ('block')
+							document.getElementById("choosedspeed").innerHTML = "سرعة عالية جدا √";
+						          document.getElementById("domain").value="speed_very";
+							} else{
+							document.getElementById("choosedspeed").innerHTML = "سرعة  مفتوح ";
+						          document.getElementById("domain").value="speed_default";
+                                  }
+								 
+
+	}
+	
+             function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*33*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+            function gettCookie(cname) { 
+		               var name = cname + "=";
+                       var ca = document.cookie.split(';');  
+                       for(var i=0; i<ca.length; i++) 
+                                  {    
+                                  var c = ca[i];     
+                                 while (c.charAt(0)==' ') c =c.substring(1);   
+                                      if (c.indexOf(name) == 0)   {       
+                                         return c.substring(name.length,c.length);   
+                                            }   
+                                   }    
+               return "";
+                   } 
+ function alertmac() {
+ userLogin();
+  alert("قد لا يمكنك استخدام الكرت مرة اخرى");
+  rem();
+  dis();
+  face();
+}
+function rem2() {
+ userLogin();
+  
+  rem();
+  dis();
+  face();
+}
+ </script>
+ <script type='text/javascript' language="javascript">
+function CheckMac(lastmac) {
+           var mac = "$(mac)";	
+		      var curmac = gettCookie("lastmac");
+		   if(curmac=="") {  
+                     				    
+					  setCookie("lastmac", mac , 20); 
+                         }   
+          
+          return "";    }
+</script>
+<script type='text/javascript' language="javascript">
+CheckMac();
+</script>
+<!-- نهاية كود التحقق من الماك العشوائي-->
+<body>
+<!-- /كود لوغو خارج البنر-->
+
+                  <!--<div class="logo-1"><img src="assets/img/logo.svg"></div>-->
+				  
+<!-- /نهاية كود اللوغو--> 
+
+<!-- /بداية كود الايقونات-->
+        <div class="bnr" >    
+        <div class="banner2">
+                <div class="floated">
+                        <a href="prices.html"><div class="social-icon dollar">
+                            <i class="icon-dollar"></i>
+                        </div></a>
+						<!-- <a href="advi.html"><div class="social-icon location">
+                            <i class="icon-alert"></i>
+                        </div></a> -->
+                        <div class="social-icon gplus" onclick="document.getElementById('alert-phone').style.display = ('block')">
+                            <i class="icon-whatsapp"></i>
+                        </div>
+                        <div class="social-icon facebook" onclick="document.getElementById('alert-location').style.display = ('block')">
+                            <i class="icon-location"></i>
+                        </div>
+                    </div>
+        </div>
 		</div>
 <br>
 <br>
 <br>
 <br>
     <!-- سكربت خاص بالساعة-->
-<div id="clock">Loading...</div>  <script type="text/javascript">  function refrClock()  {  var d=new Date();  var s=d.getSeconds();  var m=d.getMinutes();  var h=d.getHours();  var day=d.getDay();  var date=d.getDate();  var month=d.getMonth();  var year=d.getFullYear();  var days=new Array("الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت");  var months=new Array("يناير","فبراير","مارس","ابريل","ماي","يونيو","يوليو","اغسطس","سبتمبر","اكتوبر","نوفمبر","ديسمبر");  var am_pm;  if (s<10) {s="0" + s}  if (m<10) {m="0" + m}  if (h>12) {h-=12;am_pm = "مساءً."}  else {am_pm="صباحاً."}  if (h<10) {h="0" + h}  document.getElementById("clock").innerHTML=days[day] + " " + date + " من " + months[month] + " " + year + "   |   الساعة الان " + h + ":" + m + ":" + s + " " + am_pm;  setTimeout("refrClock()",1000);  }  refrClock();</script>
+<div id="clock">Loading...</div>  <script type="text/javascript">  function refrClock1()  {  var d=new Date();  var s=d.getSeconds();  var m=d.getMinutes();  var h=d.getHours();  var day=d.getDay();  var date=d.getDate();  var month=d.getMonth();  var year=d.getFullYear();  var days=new Array("الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعة","السبت");  var months=new Array("يناير","فبراير","مارس","ابريل","ماي","يونيو","يوليو","اغسطس","سبتمبر","اكتوبر","نوفمبر","ديسمبر");  var am_pm;  if (s<10) {s="0" + s}  if (m<10) {m="0" + m}  if (h>12) {h-=12;am_pm = "مساءً."}  else {am_pm="صباحاً."}  if (h<10) {h="0" + h}  document.getElementById("clock").innerHTML=days[day] + " " + date + " من " + months[month] + " " + year + "   |   الساعة الان " + h + ":" + m + ":" + s + " " + am_pm;  setTimeout("refrClock1()",1000);  }  refrClock1();</script>
 
  <!-- نهاية الكود-->
 	
     <div class="form">
-      <div class="banner">
-	  <!-- /كود لوغو داخل البنر-->
-       <!--<div class="logo-basheer">
-        <img src="assets/img/labtop.svg" />
+     
+	  <!-- /كود لوغو داخل البنر
+       <div class="logo-1">
+        <img src="img/55.png" alt="شبكة الحسام" />
+		
     </div>-->
+	
+	<!-- /كود لوغو داخل البنر-->
+	<!--<img src="img/33.png" class="logo" alt="المولد النبوي">
+       <img src="img/logo.png" class="logo" alt="شبكة الحسام">
 	   <!-- /نهاية الكود-->
+	   
 	   <!-- /بداية كود اسم الشبكة داخل البنر-->
-             <div><h1 class="animate" >دارك  Dark</h1></div>
+             <div><h1 class="animate" >شبكة العبادي نت</h1></div> 
 			
 	<br>
 	
-        </div>
+  
 		<!-- /بداية كود قسم الاعلانات الصورية-->
                             <div id="hcg-slider-1" class="hcg-slider">
                                 <div class="hcg-slide-container">
@@ -141,67 +282,186 @@ $("#nightmode").click(function(){$("body").toggleClass("nightmode")}),$("body").
 							<!-- /نهاية الكود-->
 		<!-- /نهاية الكود-->
 		<!-- /بداية كود شريط اخباري-->
-		<div class="marque">
-        <marquee direction="right" onMouseOver="this.stop();" onMouseOut="this.start();" div class="gif"> ...::::  أهلا بكم في شبكة دراك اللاسكلية<img width="50"  src="img/new.gif" align="absmiddle"/> سرعات تناسب جميع الاحجام وثبات في السرعات<img width="50" src="img/new.gif" align="absmiddle"/>يوجد حماية لمنع أختراق الحسابات<img width="50"  src="img/new.gif" align="absmiddle"/>  ننصح بالاحتفاط بالكرت حتى ينتهي فلسنا مسؤولين عن نسيان الرمز <img width="50" src="img/new.gif" align="absmiddle"/>أهلا بكم ودمتم سالمين<img width="50" src="img/new.gif" align="absmiddle"/>  نتمنى لكم قضاء اجمل واسعد الاوقات معنا وفي حالة اي خلل فني لاتتردد في التواصل معنا   ::::... <img width="50" src="img/new.gif" align="absmiddle"&nbsp; /> 
-        </marquee>
+			<div class="marque">
+       <marquee direction="right" onMouseOver="this.stop();" onMouseOut="this.start();" div class="gif">. شبكة العبادي نت, ونتمنى لكم خدمةممتعة , استخدم النت فيما يرضي الله 
+		
+		</marquee>
     </div>
 	<!-- /نهاية كود الشريط الاخباري-->
-	
+		<div class="banner">
+	    
+		<a href="https://www.tvquran.com/"><button onclick="alert('نرجو الدعاء لي ولوالدي بظهر الغيب');" type="button" style="width: 100%;  border: 1px solid white; border-radius: 4px; padding: 6px 10px; font-size: 14px;" class="form-control display-7" id="username-form3-m">
+انقر هنا لفتح موقع القران الكريم مجاناً
+</button></a></div>
+		<!-- <div class="floated">
+		<p class="b12" ><button  onclick="voucher();" >اسم مستخدم فقط</button> </p>
+        <p class="b13" ><button  onclick="member();" >اسم مستخدم و كلمة مرور</button> </p>
 		
+		</div> -->
 		<!-- /بداية كود تسجيل الدخول-->
 		<form name="login" action="$(link-login-only)" method="post"
 		      $(if chap-id) onSubmit="return doLogin()" $(endif)>	
 		   <input type="hidden" name="dst" value="$(link-orig)" />
 		   <input type="hidden" name="popup" value="true" />
+		   <input type="hidden" id="domain" name="domain"  value=""  />
+		    <input type="hidden" id="Hspeed" name="Hspeed"  value=""  />
+		   <br>
+		   
+ <div class="banner">
+	     <!-- <h4 style=" color :red ;padding: 0px 0px 18px 0px;" class="animate" >👇  خصص كرتك بنفسك  </h4>
+		<!-- <button  id='choosedupdate' onclick="document.getElementById('alert-speed').style.display = ('block')" type="button" style="width: 100%;  border: 1px solid white; border-radius: 4px; padding: 6px 10px; font-size: 14px;" class="form-control display-7" id="username-form3-m">
+عدم تعطيل التحديثات التلقائية
+</button> -->
+<button  id='choosedspeed' onclick="document.getElementById('alert-speed').style.display = ('block')" type="button" style="width: 100%;  border: 1px solid white; border-radius: 4px; padding: 6px 10px; font-size: 14px;" class="form-control display-7" id="username-form3-m">
+		   <div class="form-title"><h4>إختر سرعتك</h4>
+		   <br>
+<select id="speed" name="speed">
+  
+									 <option value="speed_gaming" >سرعة منخفضة 1 ميجا</option>
+                                     <option value="speed_economic" >سرعة متوسطة 2 ميجا</option>
+                                     <option value="speed_normal" >سرعة  عالية 4 ميجا</option> 
+                                     <option value="speed_high">مفتوح</option>
+									 </select>
+</button></div>        
+ <script type="text/javascript">
+
+						 var ip1 = "$(ip)";
+						 if  (meA.includes('$(mac)')){
+                     document.write(" <div class="+"copyright"+">");
+                                   document.write(" <span style="+" color :red ;"+" class="+"animate"+" > تنبية : </span>");
+
+document.write(" <span id="+"Address"+" style="+"color: #f05656;"+"> الرجاء الاحتفاظ بالكرت لانه لن يتم حفظ بياناته عزيزي المستخدم هذه الرساله تعرض لك فقط بسبب ان جوالك فيه عيب خطير وهو تشابهه عنوان الماك ادريس مع بقية الجوالات من نفس نوعه ممايسبب تقطع  وبطئ بالانترنت عندك اذهب الى محل صيانة الجوالات واطلب منه تغيير عنوان الماك ادريس بعنوان غير مكرر </span></div>	");
+
+			
+    } else if (ip1.match(/^10.79.*$/) || ip1.match(/^10.80.*$/)) {
+	
+	} else {
+					
+							
+							    <!-- document.write(" <div class="+"copyright"+">");
+<!--                                    document.write(" <span style="+" color :red ;"+" class="+"animate"+" > تنبية : </span>");
+ -->
+<!-- document.write(" <span id="+"Address"+" style="+"color: #f05656;"+"> عزيزي المستخدم هذه الرساله تعرض لك فقط بسبب انك متصل بجهاز بث (اكسس) غير مبرمج بشكل صحيح يرجى أحظار الجهاز للتحديث والبرمجه الصحيحه خلال ثلاثة أيام حتى لا تفقد الاتصال بالشبكه او ابلاغنا عن هذا الجهاز على الرقم 776443616  </span></div>	");
+ --> -->
+                               }
+      
+	                      </script>	 
             <div class="input-group">		   
             <div class="input-field">
-		    <input id='uname' type="text"  name="username" required improve-input rm-white-spaces to-lower to-arabic-numbers />
-			<label for="username">أسم المستخدم</label>
+			<img class="ico" src="img/user.svg" alt=" " />
+		    <input id='uname' type="tel" value="$(username)" placeholder="رقم الكرت" name="username" autocomplete="off" required improve-input rm-white-spaces to-lower only-alphanumeric to-arabic-numbers />
+			
             </div>
             <div class="input-field">
-            <input  id='paswd'  type="password"  name="password">
-			<label for="password">كلمة المرور</label>
+            <!--<input  id='paswd'  type="hidden"  name="password">
+			<label for="password">كلمة المرور</label>-->
+		 
+			<!-- <img id="img" class="ico" style="{content:url(img/sun.svg);}"  alt=" " />  -->
+           <img id="img" class="ico" src="img/password.svg" alt=" " />
+            <input  id='paswd'  type="tel"   placeholder="كلمة السر"  name="password" autocomplete="off"  improve-input rm-white-spaces to-lower only-alphanumeric to-arabic-numbers />
+			
             </div>
+			 
+                                   <!-- <span style=" color :red ;" class="animate" > تنبية : </span> -->
+                                  <h3 id="Address" style="color: #f05656;"></h3>
+          
+             
             <div id="toggles">
 				   <input type="checkbox" name="checkbox1" id="remember" class="ios-toggle" value="ON" checked/>
-				   <label for="remember" class="checkbox-label" data-off="لا تتذكرني" data-on="تذكرني"></label>
+				   <label for="remember" class="checkbox-label" data-off="عدم حفظ الكرت" data-on="حفظ الكرت"></label>
 				 </div>
-            
-            <div class="submit">
-                <button onclick='return rem();' type="submit">تسجيل الدخول<i class="icon-login"></i></button>
-			</div>
+             <script type="text/javascript">
+						 var cuurentmac = gettCookie("lastmac");
+						 var macs = "$(mac)";
+						 if (macs != cuurentmac) {
+          document.write(" <div class="+"copyright"+">");
+                                   document.write(" <span style="+" color :red ;"+" class="+"animate"+" > تنبية : </span>");
+                                 document.write(" <span id="+"Address"+" style="+"color: #f05656;"+">قد يكون لديك ميزة الماك العشوائي مفعلة يرجى تبديلها الى ماك الهاتف في اعدادات الوايرلس<a href="+"mac.html"+">  فيديوا توضيحي....</a></span></div>	");
+          document.write("<div class="+"submit"+" ><button onclick="+"alertmac()"+"  type="+"submit"+"  > تسجيل الدخول <i class="+"icon-paper-plane"+"></i></button></div>");
+                            
+							} else{
+							 document.write("<div class="+"submit"+" ><button onclick="+"rem2();"+"  type="+"submit"+"  > تسجيل الدخول <i class="+"icon-paper-plane"+"></i></button></div>");
+     
+    }
+      
+	                      </script>
+         
 			        $(if trial == 'yes')
 	                    <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
 	                        <div class="trial"><span>تجربة الإنترنت</div></a>
 					<p>$(endif)
 		        </p>
         </form>
-    </div>
+		
    <!-- /نهاية كود تسجيل الدخول-->
    
-
-    
+ <div class="copyright">
+	    <span style="color: #757575;">   المركز الرئيسي : </span>
+	    <span id="Address" style="color: #f05656;">مكان مركز الشبكة</span>
+	</div>
+	</div>
+    <div class="clear"></div>	
+<div class="floated">
+		 <a href="login.apk">
+	  <!--  <div class="submit">
+                <button type="submit" >تحميل تطبيق تسجيل الدخول<i class="icon-download-1"></i></button>
+			</div> -->
+			       </a>
+				   </div>	 
+ <div class="clear"></div>	 
+  <div class="clear"></div>	
+		<div class="floated">
+		
+		<a href="prices.html" ><p class="b12" ><button  >
+                            اسعار الكروت  <i class="icon-dollar"></i></button> </p></a>
+        <p class="b13" ><button  onclick="document.getElementById('alert-location').style.display = ('block')" >نقاط بيع الكروت  <i class="icon-location"></i></button> </p>
+		</div>
+    </div>
 							
-	<!-- لا تحذف هذه السطور تحت اي ظروف حقوق الملكية  كود الملكية @@محترف سوريا@@أبو رواد-->
-  <!-- <footer class="copyright2">
+	<!-- لا تحذف هذه السطور تحت اي ظروف حقوق الملكية -->
+       <footer class="copyright2">
 		<tr>
 			<td style="height: 20px;" align="center" valign="center">
 				<font style="background:rgba(0,0,0,0.4);color: #FFF;font-size: 11px;">
-					Developed &amp; Powered By 
-				<a target="_blank" style="color: lime;" href="https://www.mhtrfsyria.com">
-				MHTRF SYRIA &copy; 2022</a>
-					<b style="color: #FFFF00; font-size: 9px;"><br />[we are not 
-				responsible for any kind of misuse by this app]</b>
+					Aden Technical Team
+				<a target="_blank" style="color: #FFF;" href="https://wa.me/+967780967013" >
+				780967013  &copy; 2024  </a>
+					
 				</font>
 			</td>
 		</tr>
-  </footer> -->
-<!-- /نهاية كود الملكية @@محترف سوريا@@أبو رواد-->
+  </footer>
+<!-- /نهاية كود الملكية -->
 
  </div>
 
 <!-- /بداية كود شريط الاخطاء-->
 $(if error)
+<script type='text/javascript' language="javascript">
+
+
+	function rem(){
+	userLogin();
+        var uname = document.getElementById('uname').value;
+        var paswd = document.getElementById('paswd').value;
+        var rem   = document.getElementById('remember').checked;
+        if(rem == true){
+        var date = new Date();
+        date.setTime(date.getTime()+(5*1000));
+        var expires = date.toGMTString();
+        date.setTime(date.getTime()+(259200*1000));
+        var expire  = date.toGMTString();
+        document.cookie = 'uname='+uname+';expires='+expire+'';
+        document.cookie = 'paswd='+paswd+';expires='+expire+'';
+        document.cookie = 'error=1;expires='+expires+'';
+        }
+        else{
+        return;
+        }
+		
+        }
+	
+</script>
     <div id="alert-error" class="alert-back" onclick="this.style.display = ('none')">	
         <div class="modal">
             <div class="modal-icon error"><i class="icon-error"></i></div>
@@ -241,6 +501,9 @@ document.write("لا يمكنك تسجيل الدخول , انتهى رصيد ه
 else if (error == "invalid Calling-Station-Id") {
 document.write("هذا الحساب مقترن بجهاز آخر ");
 }
+else if (error == "user $(username) has reached uptime limit") {
+document.write("الحساب $(username) قد انتهى الوقت المتاح له");
+}
 else if (error == "user $(username) is not allowed to log in from this MAC address") {
 document.write("هذا الحساب مقترن بجهاز آخر");
 }
@@ -262,12 +525,41 @@ $(endif)
     <div id="alert-phone" class="alert-back" onclick="this.style.display = ('none')">	
         <div class="modal">
             <div class="modal-icon phone"><i class="icon-phone"></i></div>
-            <div class="title phone">أتصل بنا:</div>
+            <div class="title phone">أتصل بنا</div>
             <div class="modal-clear"></div>
             <div id="line"></div>
             <div class="modal-body">
-                <div >ادارة  : <p  id="Phone_Admin" >780967013</p></div>
-                <div >صيانة  : <p  id="Phone_Repair" >780967013</p></div>
+                <div >خدمة العملاء  : <p  id="Phone_Admin" >771191216</p></div>
+            </div>
+        </div>
+    </div>
+<!-- /نهاية الكود-->
+
+<!-- /بداية كود رسالة تحذير سرعة متوسطة-->
+    <div id="alert-middlespeed" class="alert-back" onclick="this.style.display = ('none')">	
+        <div class="modal">
+            <div class="modal-icon place"><i class="icon-cancel-circled"></i></div>
+            <div class="title place">لقد اخترت سرعه عالية !</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+			  <div>- <p id="titel">   للحفاظ على رصيد الكرت يرجى اختيار سرعة اقتصادية او متوسطة  .</p></div>
+                
+            </div>
+        </div>
+    </div>
+<!-- /نهاية الكود-->
+
+<!-- /بداية كود رسالة تحذير سرعة عالية-->
+    <div id="alert-highspeed" class="alert-back" onclick="this.style.display = ('none')">	
+        <div class="modal">
+            <div class="modal-icon place"><i class="icon-cancel-circled"></i></div>
+            <div class="title place">لقد اخترت سرعه عالية جدا !</div>
+            <div class="modal-clear"></div>
+            <div id="line"></div>
+            <div class="modal-body">
+			  <div>- <p id="titel">   للحفاظ على رصيد الكرت يرجى اختيار سرعة اقتصادية او متوسطة  .</p></div>
+                
             </div>
         </div>
     </div>
@@ -277,36 +569,28 @@ $(endif)
     <div id="alert-location" class="alert-back" onclick="this.style.display = ('none')">	
         <div class="modal">
             <div class="modal-icon place"><i class="icon-location"></i></div>
-            <div class="title place">الوكلاء و المعتمدين :</div>
+            <div class="title place">نقاط بيع الكروت :</div>
             <div class="modal-clear"></div>
             <div id="line"></div>
             <div class="modal-body">
-                <div>0 - <p id="titel"> -- مراكز توزيع البطاقات  -- </p></div>
-                <div>1 - <p id="titel0"> </p></div>
-                <div>2 - <p id="titel1" ></p></div>
-                <div>3 - <p id="titel2" > </p></div>
-                <div>4 - <p id="titel3" > </p></div>
-                <div>5 - <p id="titel4" > </p></div>
-                <div>6 - <p id="titel5" > </p></div>
-                <div>7 - <p id="titel6" > </p></div>
-				<div>8 - <p id="titel3" > </p></div>
-                <div>9 - <p id="titel4" > </p></div>
+			  <div> <p id="titel">جميع الأماكن التي تتواجد فيها تغطية شبكة العبادي نت</p></div>
+               
             </div>
         </div>
     </div>
-<!-- /نهاية الكود-->
+<!-- /نهاية الكود
 
 <!-- /كود جافا سكربت تابع لعرض صور الاعلانات-->
-    <script>
+   <!--  <script>
         (function() {
             //If you want to include more images, add the link name and URL of the image in the array list below.
             let images_list = [{
-                    "url": "img/pic1.jpg",
+                    "url": "img/logo.png",
                     "name": "image 1",
                     "link": ""
                 },
                 {
-                    "url": "img/pic2.jpg",
+                    "url": "img/pic2.png",
                     "name": "image 2",
                     "link": ""
                 },
@@ -370,9 +654,42 @@ $(endif)
             }, 5000);
 
         })();
-    </script>
+		
+    </script> -->
 <!-- /نهاية الكود-->
-
+<script type="text/javascript">
+var host = window.location.hostname;
+document.title = "شبكة العبادي نت " + host, window.onload = voucher();
+function kodevoucher() {
+    var e = document.getElementById("uname").value //.toLowerCase(); //.toUpperCase();
+    document.getElementById("uname").value = e, document.getElementById("password").value = e
+}
+function voucher() {
+document.title = "شبكة العبادي نت" + host
+    document.getElementById("uname").classList.remove("uname"), document.getElementById("uname").classList.add("userkv"), document.getElementById("uname").focus(), document.getElementById("uname").oninput = kodevoucher, document.getElementById("uname").placeholder = "رقم الكرت", document.getElementById("paswd").type = "hidden", document.getElementById("img").src = "", document.getElementById("img").alt = "", document.getElementById("Informasi").innerHTML = "Masukkan Kode Voucher Lalu Klik Login"
+}
+function member() {
+document.title = "شبكة العبادي نت" + host
+    document.getElementById("uname").classList.remove("userkv"), document.getElementById("uname").classList.add("uname"), document.getElementById("uname").focus(), document.getElementById("uname").oninput = "", document.getElementById("uname").placeholder = "أسم المستخدم", document.getElementById("paswd").type = "tel", document.getElementById("img").src = "img/password.svg", document.getElementById("Informasi").innerHTML = "Masukkan Username dan Password Lalu Klik Login"
+}
+</script>
+ <script type="text/javascript">
+function dis(){
+        
+        var disupdate = document.getElementById('update').checked;
+        if(disupdate == true){
+		var u="choose-auto-update-off";
+        <!-- var dis_checked = document.getElementById(update).checked; -->
+		setCookie('update', u, 1365);
+		document.getElementById("choosedupdate").innerHTML = "تعطيل التحديثات التلقائية √";
+                                 
+        } else{
+		document.getElementById("choosedupdate").innerHTML = "عدم تعطيل التحديثات التلقائية";
+		setCookie('update', '', 1365);
+        return;
+        }
+        }
+		</script>
 </body>
 
 </html>
