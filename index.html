@@ -1,0 +1,200 @@
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد سكربت دمج خطوط ميكروتك (إصدار 6 فقط)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            text-align: right;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px;
+            margin: 0;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #2a5298;
+            font-size: 1.1em;
+        }
+        input[type="number"], input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #2a5298;
+            border-radius: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        input[type="number"]:focus, input[type="text"]:focus, textarea:focus {
+            border-color: #ff6f61;
+            box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+            outline: none;
+        }
+        textarea {
+            height: 300px;
+            resize: none;
+            font-family: monospace;
+        }
+        button {
+            padding: 12px 15px;
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            width: 48%;
+            margin: 5px 1%;
+            font-size: 1em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background-color: #ff6f61;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .description {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(42, 82, 152, 0.2);
+            color: #333;
+        }
+        .description h3 {
+            color: #2a5298;
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .footer-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .footer-button:hover {
+            background-color: #e65a50;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>مولد سكربت دمج خطوط ميكروتك (إصدار 6 فقط)</h1>
+    
+    <div class="container">
+        <input type="hidden" id="start" value="1">
+
+        <label for="end">عدد الخطوط المراد دمجها</label>
+        <input type="number" id="end" value="2" placeholder="أدخل عدد الخطوط">
+
+        <label for="out">أسم منفذ الخروج</label>
+        <input type="text" id="out" value="lan" placeholder="أدخل اسم منفذ الخروج">
+
+        <label for="interface">أسم منفذ الدخول</label>
+        <input type="text" id="interface" value="ether" placeholder="أدخل اسم الواجهة">
+
+        <textarea id="scriptOutput" readonly placeholder="سيظهر السكربت هنا..."></textarea>
+        
+        <div class="button-container">
+            <button onclick="generateScript()">توليد السكربت</button>
+            <button onclick="copyToClipboard()">نسخ السكربت</button>
+        </div>
+    </div>
+
+    <div class="description">
+        <h3>شرح السكربت:</h3>
+        <p>
+            هذا السكربت يساعدك على إنشاء اعدادات تلقائية لدمج الخطوط بدون تعب. 
+            يمكنك إدخال عدد الخطوط التي ترغب في دمجها، واسم منفذ الخروج، واسم منفذ الدخول.
+            سيتم إنشاء السكربت بناءً على المعلومات المدخلة، ويمكنك نسخه بسهولة لاستخدامه.
+            <br><br>
+            <strong>ملاحظة:</strong> هذا السكربت يعمل على إصدار ميكروتك 6 فقط.
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2024 محترف سوريا - جميع الحقوق محفوظة
+        <br>
+        <a href="https://www.mhtrfsyria.com/" class="footer-button" target="_blank">زيارة موقع محترف سوريا</a>
+    </footer>
+
+    <script>
+        function generateScript() {
+            const start = document.getElementById("start").value;
+            const end = document.getElementById("end").value;
+            const out = document.getElementById("out").value;
+            const interfaceName = document.getElementById("interface").value;
+
+            let script = `{
+:local f [(${start}) ];
+:local t [(${end}) ];
+:local o [("${out}") ];
+
+:for e from $f to $t do={
+
+:local k [("${interfaceName}$e") ];
+
+:local p [($e - 1) ];
+
+# إعدادات جدار الحماية
+/ip firewall mangle
+add action=mark-connection chain=input in-interface=("$k") new-connection-mark=("CON_$e") passthrough=yes
+add action=mark-routing chain=output connection-mark=("CON_$e") new-routing-mark=("TO_$e") passthrough=yes
+add action=mark-connection chain=prerouting dst-address-type=!local in-interface=$o new-connection-mark=("CON_$e") passthrough=yes per-connection-classifier=("both-addresses-and-ports:$t/$p")
+add action=mark-routing chain=prerouting connection-mark=("CON_$e") in-interface=$o new-routing-mark=("TO_$e") passthrough=yes
+
+/ip firewall nat
+add action=masquerade chain=srcnat out-interface=("$k")
+/ip route
+add distance=1 gateway=("192.168.$e.1") routing-mark=("TO_$e")
+add distance=("$e") gateway=("192.168.$e.1")
+
+}}`;
+
+            document.getElementById("scriptOutput").value = script;
+        }
+
+        function copyToClipboard() {
+            const copyText = document.getElementById("scriptOutput");
+            copyText.select();
+            document.execCommand("copy");
+            alert("تم نسخ السكربت إلى الحافظة!");
+        }
+    </script>
+</body>
+</html>
